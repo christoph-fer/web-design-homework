@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>JavaScript | Date & Time </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuil.ttf');
+                font-weight: 300;
+            }
+             @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuisl.ttf');
+                font-weight: 400;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeui.ttf');
+                font-weight: normal;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/seguisb.ttf');
+                font-weight: 600;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuib.ttf');
+                font-weight: 700;
+            }
+            
+            * {
+               font-family: "MyFont";
+            }
+        	body {
+        		font-family: "MyFont";
+        		color: #333;
+                letter-spacing: -0.5px;
+        		margin: 0px;
+        		background-color: #f2f2f2;
+        	}
+
+        	.wrapper {
+        		
+        	}
+        	header {
+        		padding-top: 50px;
+        		padding-bottom: 50px;
+        		font-weight: 500;
+        		text-align: center;
+        		margin: auto;
+                text-transform: uppercase;
+        		font-size: 36px;
+                letter-spacing: 5px;
+        	}
+        	.main {
+        		background: #fff;
+        		height: auto;
+                width: 500px;
+        		padding: 40px;
+        		box-shadow: 0px 0px 50px 0px #ddd;
+        		margin: auto;
+        	}
+        	.brand {
+        		margin-top: 10px;
+        		font-size: 36px;
+        	}
+        	.data {
+                margin-top: -30px;
+        		font-size: 100px;
+                font-weight: 300;
+                line-height: 10px;
+        	}
+        </style>
+        <script type="text/javascript">
+            function zero(mn){
+                            if(mn<10){
+                            mn="0"+mn;
+                            return mn;
+                            }
+                            else {
+                            return mn;           
+                            }
+                        }
+        </script>
+        
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				Date & Time
+			</header>
+			<div class="main">
+        		<div class="data">
+        			<script type="text/javascript">
+
+                        d=new Date();
+
+                        dd=d.getDate();
+                        mm=d.getMonth()+1;
+                        yy=d.getFullYear();
+
+                        hh=d.getHours();
+                        mn=d.getMinutes();
+                        ss=d.getSeconds();
+
+                        if(hh>12){
+                            aphh=hh-12;
+                        }
+                        else{
+                            aphh=hh;
+                        }
+
+                        if(hh>11){
+                            apf="PM";
+                        }
+                        else{
+                            apf="AM";
+                        }
+
+                        if(mn<10){
+                            mn="0"+mn;
+                        }
+                        
+                        
+                        if(hh==0){
+                            aphh=12;
+                        }
+
+                        document.write("<font style=font-size:34px;font-weight:500;line-height:50px;><p align=center>24th January, "+yy+"<br><font style=font-size:24px;letter-spacing:7px;color:#777;>WEDNESDAY</font></p></font>")
+                        document.write("<font style=font-size:24px;font-weight:bold;line-height:100px;>24 HOUR<br></font>"+hh+":"+mn+"<br>");
+                        document.write("<font style=font-size:24px;font-weight:bold;line-height:100px;>12 HOUR<br></font>"+aphh+":"+mn+"<font size=12px> "+apf+"</font>");
+        			</script>
+        		</div>
+			</div>
+		</div>
+	</body>
+</html>

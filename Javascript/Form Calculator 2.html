@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>Javascript | Form Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuil.ttf');
+                font-weight: 300;
+            }
+             @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuisl.ttf');
+                font-weight: 400;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeui.ttf');
+                font-weight: normal;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/seguisb.ttf');
+                font-weight: 600;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuib.ttf');
+                font-weight: 700;
+            }
+            @font-face {
+                font-family: "MySymb";
+                src:url('Fonts/segmdl2.ttf');
+                font-weight: 300;
+            }
+            
+            * {
+               font-family: "MyFont";
+            }
+        	body {
+        		font-family: "MyFont";
+        		color: #333;
+                letter-spacing: -0.5px;
+        		margin: 0px;
+        		background-color: #f2f2f2;
+        	}
+
+        	header {
+        		padding-top: 50px;
+        		padding-bottom: 30px;
+        		font-weight: 500;
+        		text-align: center;
+        		margin: auto;
+                text-transform: uppercase;
+        		font-size: 36px;
+                letter-spacing: 5px;
+        	}
+
+        	#main {
+        		background: #fff;
+        		height: 380px;
+                width: 344px;
+        		padding: 30px;
+        		box-shadow: 0px 0px 50px 0px #ddd;
+        		margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                text-align: center;
+        	}
+            .mainlose {
+                box-shadow: 0px 0px 50px 0px #cc0000;
+            }
+        	.disp {
+        		text-align: right;
+        		font-size: 40px;
+			    font-weight:bold;
+                margin-left: auto;
+                margin-right: auto;
+        	}
+        	.data {
+                text-align: center;
+        	}
+            .stage {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-left: auto;
+                margin-right: auto;
+
+            }
+            h1 input[type=button] {
+                background-color: #0063B1;
+                border: none;
+                color: #f2f2f2;
+                font-weight: bold;
+                font-size: 24px;
+                padding: 15px;
+                margin-top: 100px;
+                height: 100px;
+                width: auto;
+                margin-bottom: 20px;
+                font-family: MySymb;
+            }
+            img {
+                box-shadow: 0px 0px 60px 0px #bbb;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+	        input[type=text] {
+                border: none;
+                font-size: 28px;
+			    font-weight:bold;
+                text-align: right;
+                width: 320px;
+                padding: 10px;
+                margin-right: auto;
+                margin-right: auto;
+                margin-bottom: 20px;
+                margin-top: 20px;
+                background: #eee;
+            }
+            .calbutton {
+                background: #0063B1;
+                border: none;
+                font-size: 24px;
+                color: #f2f2f2;
+                height: 50px;
+                width: 75px;
+                margin: 4px;
+                padding-bottom: 8px;
+                font-family: MyFont;
+                transition: background 0.3s;
+            }
+            .calbutton:hover {
+                background: #0080E6;
+
+            } 
+            .calbutton:active {
+                background: #004780;
+            }
+            .funcbutton {
+                background: #ddd;
+                border: none;
+                margin-left: -262px;
+                font-size: 24px;
+                color: #333;
+                height: 50px;
+                width: 75px;
+                padding-bottom: 8px;
+                font-family: MyFont;
+                transition: background 0.3s;
+            }      
+            .funcbutton:hover {
+                background: #f2f2f2;
+
+            } 
+            .funcbutton:active {
+                background: #ccc;
+            }  
+            .numbutton {
+                background: #eee;
+                border: none;
+                font-size: 24px;
+                color: #333;
+                height: 50px;
+                width: 75px;
+                margin: 4px;
+                padding-bottom: 8px;
+                font-family: MyFont;
+                transition: background 0.3s;
+            }  
+            .numbutton:hover {
+                background: #f5f5f5;
+
+            } 
+            .numbutton:active {
+                background: #ccc;
+            }   
+            .maindisplay {
+                background: #fff;
+            }                
+        </style>
+        <script>
+            function add(){
+                n1=document.num1.display.value;
+                n2=document.num2.display.value;
+                n2=parseInt;
+                n1=parseInt;
+                ans=parseInt;
+                ans=n1+n2;
+                document.answer.display.value=ans;
+            }
+            function mul(){
+                n1=document.num1.display.value;
+                n2=document.num2.display.value;
+                ans=n1*n2;
+                document.answer.display.value=ans;
+            }
+            function div(){
+                n1=document.num1.display.value;
+                n2=document.num2.display.value;
+                ans=n1/n2;
+                document.answer.display.value=ans;
+            }
+            function sub(){
+                n2=parseInt;
+                n1=parseInt;
+                ans=parseInt;
+                n1=document.num1.display.value;
+                n2=document.num2.display.value;
+                ans=n1-n2;
+                document.answer.display.value=ans;
+            }
+            function clear(){
+                document.num1.display.value="0";
+                document.num2.display.value="0";
+            }
+	    </script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				Calculator
+			</header>
+			<div id="main">
+                
+				<div class="disp">
+					<form name="num1">
+						<input name="display" type="text" placeholder="0">
+                    </form>
+				</div>
+                
+                <input class="calbutton" type="button" value="+" onclick="add()">
+                <input class="calbutton" type="button" value="-" onclick="sub()">
+                <input class="calbutton" type="button" value="x" onclick="mul()">
+                <input class="calbutton" type="button" value="/" onclick="div()">
+                <div class="disp">
+                    <form name="num2">
+                        <input name="display" type="text" placeholder="0">
+                    </form>
+                </div>
+                <input class="funcbutton" type="button" value="C" onclick="clear()">
+                <form name="answer">
+                    <input class="maindisplay" name="display" type="text" placeholder="0">
+                </form>
+                
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Grafpedia Portfolio</title>
+        <style>
+            body {
+                background-color:#513B2A;
+                
+                color: #333;
+            }
+            .container {
+                font-family: SFNS Display, Bahnschrift, Segoe UI;
+                width: 925px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .branding {
+                padding: 30px;
+                max-width: 1024px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .title {
+                padding-left: 80px;
+                font-size: 32px;
+                color: #f2f2f2;
+                font-weight: 600;
+            }
+            .head {
+                font-size: 32px;
+                color: #f2f2f2;
+                font-weight: 600;
+            }
+            .disc {
+                padding-left: 80px;
+                padding-top: 5px;
+                font-size: 12px;
+                color: #f2f2f2;
+            }
+            .navcontainer {
+                background: linear-gradient(#FD830C, #F1C558 40%, #F1C558, #F1C558, #FD830C);
+                //background-color:#FD9B0C #F1C558 #FD830C;
+                height: 330px;
+                width: 820px;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 7px;
+                position: relative;
+                z-index: -1;
+            }
+            .navcontfront {
+                background-color:#f2f2f2;
+                height: 200px;
+                width: 880px;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 7px;
+                position: relative;
+                z-index: 0;
+                margin-top: -250px;
+                border-top: solid 1px #ccc;
+                border-bottom: solid 1px #ccc;
+            }
+            .navcontback {
+                background-color:#f2f2f2;
+                height: 240px;
+                width: 920px;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 7px;
+                position: relative;
+                z-index: -2;
+                margin-top: -220px;
+            }
+            .header {
+                display: grid;
+                grid-template-columns: 6fr 4fr;
+                margin: -15px;
+            }
+            .nav {
+                position: relative;
+                z-index: 2;
+                color: #fff;
+                padding: 5px;
+                margin-top: -308px;
+            }
+            font ul {
+                overflow: hidden;
+                padding: 0px;
+                text-align: center;
+                cursor: pointer;
+                position: relative;
+                z-index: 2;
+
+            }
+            font li {
+                display: inline-block;
+                padding: 15px;
+                position: relative;
+                z-index: 2;
+                height: 20px;
+                border-radius: 5px;
+                transition: background 0.4s;
+            }
+            font li:hover{
+                background: #513B2A;
+                position: relative;
+                z-index: 2;
+            }
+            .adtext {
+                display: grid;
+                color: #513B2A;
+                padding-left: 80px;
+                padding-top: 10px;
+                line-height: 25px;
+            }
+            .adimg {
+                display: grid;
+                border-radius: 7px;
+                border: solid 1px #ccc;
+                margin-top: 25px;
+                height: 180px;
+                margin-left: 10px;
+                margin-right: 30px;
+                position: relative;
+                z-index: 5;
+                background-image: url(community.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .adimgleft {
+                height: 30px;
+                width: 55px;
+                background: linear-gradient(-90deg, #F1C558, #FD830C);
+                margin-top: -50px;
+                margin-left: 534px;
+                position: relative;
+                z-index: 6;
+                border-bottom-right-radius: 7px;
+                border-top-right-radius: 7px;
+                cursor: pointer;
+                font-weight: 600;
+                color: #f2f2f2;
+                font-size: 32px;
+                transition: background 0.4s;
+                
+            }
+            .adimgleftback {
+                height: 50px;
+                width: 8px;
+                background-color:#513B2A;
+                margin-top: -40px;
+                margin-left: 534px;
+                position: relative;
+                z-index: 5;
+                border-bottom-left-radius: 20px;
+                border-top-left-radius: 20px;
+            }
+            .adimgleft:hover {
+                background: linear-gradient(-90deg, #513B2A, #FD830C);
+            }
+            .adimgleftdecoup {
+                height: 10px;
+                width: 7px;
+                background-color: #f2f2f2;
+                margin-top: -35px;
+                margin-left: 558px;
+                position: relative;
+                z-index: 7;
+                transform: skewX(-40deg);
+            }
+            .adimgleftdecodown {
+                height: 10px;
+                width: 7px;
+                background-color: #f2f2f2;
+                margin-top: 0px;
+                margin-left: 558px;
+                position: relative;
+                z-index: 7;
+                transform: skewX(40deg);
+            }
+            
+            .adimgright {
+                height: 30px;
+                width: 55px;
+                background: linear-gradient(-90deg, #FD830C, #F1C558);
+                margin-top: -25px;
+                margin-left: 819px;
+                position: relative;
+                z-index: 6;
+                border-bottom-left-radius: 7px;
+                border-top-left-radius: 7px;
+                cursor: pointer;
+                font-weight: 600;
+                color: #f2f2f2;
+                font-size: 32px;
+                transition: background 0.4s;
+            }
+            .adimgrightback {
+                height: 50px;
+                width: 8px;
+                background-color:#513B2A;
+                margin-top: -40px;
+                margin-left: 865px;
+                position: relative;
+                z-index: 5;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+            .adimgright:hover {
+                
+                background: linear-gradient(-90deg, #FD830C, #513B2A);
+            }
+            .adimgrightdecoup {
+                height: 10px;
+                width: 7px;
+                background-color: #f2f2f2;
+                margin-top: -35px;
+                margin-left: 845px;
+                position: relative;
+                z-index: 7;
+                transform: skewX(40deg);
+            }
+            .adimgrightdecodown {
+                height: 10px;
+                width: 7px;
+                background-color: #f2f2f2;
+                margin-top: 0px;
+                margin-left: 845px;
+                position: relative;
+                z-index: 7;
+                transform: skewX(-40deg);
+            }
+            .text {
+                display: grid;
+                color: #513B2A;
+                padding-top: 10px;
+                line-height: 25px;
+            }
+            .main {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 7px;
+                border: solid 1px #ccc;
+                height: auto;
+                width: 820px;
+                margin-top: 260px;
+                background-color: #f2f2f2;
+            }
+            .content {
+                display: grid;
+                margin: 10px;
+                margin-right: 5px;
+                border-radius: 7px;
+                border: solid 1px #ccc;
+                align-content: flex-start;
+                padding:20px;
+                font-size: 14px;
+            }
+            .sidebar {
+                display: grid;
+                margin: 10px;
+                margin-left: 5px;
+                border-radius: 7px;
+                border: solid 1px #ccc;
+                align-content: flex-start;
+                padding: 20px;
+            }
+            .sidetitle {
+                font-size: 24px;
+                color: #f2f2f2;
+                font-weight: 600;
+                padding-left: 20px;
+            }
+            .sidetext {
+                display: grid;
+                color: #513B2A;
+                padding-top: 5px;
+                line-height: 25px;
+                font-size: 12px;
+                margin-left: -25px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="branding">
+                <div class="title"><font color="#459A00">Grafpedia</font> Portfolio</div>
+                <div class="disc">Premium Webmaster Downloads</div>
+            </div>
+            <div class="navcontainer">
+                
+            </div>
+            
+            <div class="navcontfront">
+                <div class="header">
+                    <div class="ad">
+                        <div class="title"><br><font color="#459A00">Welcome</font><font color="#513B2A"> to our website</font></div>
+                        <div class="adtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam laudantium consequatur vel culpa sunt distinctio in corporis tempore, possimus facere magnam ex saepe?</div>
+                    </div>
+                    <div class="adimg"></div>
+                   
+                </div>
+                 <div class="adimgleft"></div>
+                <div class="adimgleftback"></div>
+                <div class="adimgleftdecoup"></div>
+                 <div class="adimgleftdecodown"></div>
+                
+                <div class="adimgright"></div>
+                <div class="adimgrightback"></div>
+                <div class="adimgrightdecoup"></div>
+                <div class="adimgrightdecodown"></div>
+            </div>
+            <div class="navcontback"></div>
+            <div class="nav">
+                <font>
+                    <ul>
+                        <li>ABOUT US</li>
+                        <li>SERVICES</li>
+                        <li>PORTFOLIO</li>
+                        <li>PRODUCTS</li>
+                        <li>SHOP</li>
+                        <li>CONTACT</li>
+                        <li>BLOG</li>
+                    </ul>
+                </font>
+            </div>
+            <div class="main">
+                <div class="content">
+                    <div class="head"><font color="#459A00">Latest</font><font color="#513B2A"> work</font></div>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aliquam natus recusandae, dolor enim nulla pariatur veniam quas. Perspiciatis nobis rem beatae.<br>Veritatis perspiciatis repellendus omnis veniam at voluptatum reiciendis sint recusandae a, nemo distinctio, nostrum laudantium quas officiis deserunt dolore ducimus eaque!</div><br>
+                    
+                    <div class="head"><font color="#459A00">Grafpedia</font><font color="#513B2A"> blog</font></div>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aliquam natus recusandae, dolor enim nulla pariatur veniam quas. Perspiciatis nobis rem beatae.<br>Veritatis perspiciatis repellendus omnis veniam at voluptatum reiciendis sint recusandae a, nemo distinctio, nostrum laudantium quas officiis deserunt dolore ducimus eaque!</div>
+                </div>
+                <div class="sidebar">
+                    <div class="sidetitle"><font color="#513B2A">Services</font></div>
+                    <div class="sidetext">
+                        <ul>
+                            <li>Lorem ipsum has been the standard</li>
+                            <li>Standard dummy text ever design</li>
+                            <li>Make a type specimen book lorem</li>
+                            <li>It has survived not only five ipsum</li>
+                            <li>Lorem ipsum has been the dolor est</li>
+                            <li>Standard dummy text ever estua mort</li>
+                            <li>Make a type specimen book lorem dol</li>
+                        </ul>
+                    </div><br>
+                    <div class="sidetitle"><font color="#513B2A">Special Offers</font></div>
+                    <div class="sidetext">
+                        <ul>
+                            <li>Lorem ipsum has been the</li>
+                            <li>Standard dummy text ever</li>
+                            <li>Make a type specimen book</li>
+                            <li>It has survived not only five</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>

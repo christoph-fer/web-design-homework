@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>Currency Converter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuil.ttf');
+                font-weight: 300;
+            }
+             @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuisl.ttf');
+                font-weight: 400;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeui.ttf');
+                font-weight: normal;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/seguisb.ttf');
+                font-weight: 600;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuib.ttf');
+                font-weight: 700;
+            }
+            
+            * {
+               font-family: "MyFont";
+            }
+        	body {
+        		font-family: "MyFont";
+        		color: #333;
+                letter-spacing: -0.5px;
+        		margin: 0px;
+        		background-color: #f2f2f2;
+        	}
+
+        	.wrapper {
+        		
+        	}
+        	header {
+        		padding-top: 50px;
+        		padding-bottom: 50px;
+        		font-weight: 500;
+        		text-align: center;
+        		margin: auto;
+                text-transform: uppercase;
+        		font-size: 36px;
+                letter-spacing: 5px;
+        	}
+        	.main {
+        		background: #fff;
+        		height: 380px;
+                min-width: 300px;
+        		max-width: 360px;
+        		padding: 30px;
+        		padding-top: -10px;
+        		box-shadow: 0px 0px 50px 0px #ddd;
+        		margin: auto;
+        	}
+        	.brand {
+        		margin-top: 10px;
+        		font-size: 36px;
+        	}
+        	.data {
+        		font-size: 32px;
+                line-height: 50px;
+        	}
+        </style>
+        
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				Currency Converter
+			</header>
+			<div class="main">
+				
+        		<div class="brand">
+        			<script type="text/javascript">
+        				alert("Welcome to Currency Converter!");
+        			</script>
+        		</div>
+        		<div class="data">
+        			<script type="text/javascript">
+        				d=parseInt(prompt("Amount in Dollar","0"));
+                        
+                        r=d*63.4885;
+                        
+                        document.write("$ <font size=42px style=font-weight:200>"+d+"</font><br><b><font style=font-size:24px;>Amount in Dollar</font></b>");
+                        document.write("<br><br>₹ <font size=42px style=font-weight:200>"+r+"</font><br><b><font style=font-size:24px;>Amount in Rupee</font></b>");
+        			</script>
+        		</div>
+                <div><br><br>
+                    1 USD = 63.4885 INR<br>
+                    Last Updated Jan 8, 2018
+                </div>
+			</div>
+		</div>
+	</body>
+</html>

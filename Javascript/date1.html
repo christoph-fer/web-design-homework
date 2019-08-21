@@ -1,0 +1,87 @@
+<html>
+
+<head>
+	<title></title>
+	
+	<script>
+
+		d=new Date();
+
+		td=d.getDay(); 		
+
+		a1=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+		dd=d.getDate();
+		mm=d.getMonth()+1;
+	a2=["January","February","March","April","May","June","July","August","September","October","November","December"];
+		yy=d.getFullYear();
+		
+		tdt=dd+ "/" +mm+ "/" +yy; 
+		
+		hh=d.getHours();
+		mi=d.getMinutes();
+		ss=d.getSeconds();
+
+		ap="am";
+
+		document.write("Month "+a2[mm-1]); 
+
+		//function to add zero
+
+		function z(n){
+			if(n<10){
+				n="0"+n;
+			return n;
+			}else{
+			return n;			
+			}
+		}
+
+		hh=z(hh);
+		mi=z(mi);
+		ss=z(ss);
+
+		dd=z(dd);
+		mm=z(mm);
+
+
+		if(hh>=12){
+		
+			ap="pm";
+
+		}
+
+		if(hh>12){
+
+			hh=hh-12;
+		}
+
+		tm=hh+ ":" +mi+ ":" +ss+" "+ap;	
+
+		document.write("<br/>Date and Time : "+d);
+
+		document.write("<br/><br/>Date weekday: Day "+(td+1)+" or "+a1[td]);
+
+		document.write("<br/><br/>Date: "+dd);
+			
+		document.write("<br/><br/>Month: "+mm);
+		
+
+
+		document.write("<br/><br/>Year: "+yy);
+
+		document.write("<br/><br/> Date in dd/mm/yy: "+tdt);
+
+		document.write("<br/><br/>Time in Hours: "+hh);
+		
+		document.write("<br/><br/>Time in Minutes: "+mi);
+
+		document.write("<br/><br/>Time in Seconds: "+ss);
+
+		document.write("<br/><br/> Time in hh: mi :ss: "+tm);
+		
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS Animations</title>
+</head>
+    <style>
+        body {
+            background-color: #1B3E59;
+            font-family: SFNS Display;
+            align-content: center;
+            align-items: center;
+            text-align: center;
+            color: #f2f2f2;
+        }
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container > div {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .head {
+            font-size: 48px;
+            padding: 50px;
+            font-weight: 600;
+        }
+        .box {
+            border: solid #132326 10px;
+            display: grid;
+            height: 200px;
+            width: 300px;
+            background-color: #88A34F;
+        }
+        .cover {
+            position: relative;
+            z-index: 1;
+            margin-top: -140px;
+            display: grid;
+            height: 200px;
+            width: 300px;
+            background-color: #BF352F;
+            transition: transform 1s;
+        }
+        .cover > div {
+            font-size: 34px;
+            padding: 30px;
+            color: #f2f2f2;
+        }
+        .merrychristmas {
+            color:#f2f2f2;
+            transform: translateY(90px);
+            padding: 30px;
+            display: grid;
+            font-size: 34px;
+            transition: transform 1s;
+        }
+        .gift {
+            margin-top: -40px;
+            margin-left: 40px;
+            height: 40px;
+            width: 40px;
+            background-color: #FFAC00; 
+            transition: transform 1s;
+        }
+        .gift2 {
+            margin-top: -40px;
+            margin-left: 180px;
+            height: 30px;
+            width: 30px;
+            background-color: #224732; 
+            transition: transform 1s;
+        }
+        .gift3 {
+            margin-top: -40px;
+            margin-left: 180px;
+            height: 3px;
+            width: 3px;
+            background-color: #BF0404;
+            transition: transform 1s;
+        }
+        .gift4 {
+            margin-top: -40px;
+            margin-left: 180px;
+            height: 5px;
+            width: 5px;
+            background-color: #f2f2f2; 
+            transition: transform 1s;
+        }
+        .box:hover > .cover {
+            transform: translate(200px,200px) rotate(60deg);
+        }
+        .box:hover > .merrychristmas {
+            transform: translateY(20px);
+        }
+        .box:hover > .gift {
+            transform: translate(-90px,-150px) rotate(320deg);
+        }
+        .box:hover > .gift2 {
+            transform: translate(80px,-100px) rotate(220deg);
+        }
+        .box:hover > .gift3 {
+            transform: translate(-20px,-150px) rotate(160deg) scale(10); 
+        }.box:hover > .gift4 {
+            transform: translate(150px,-150px) rotate(700deg) scale(5); 
+        }
+        @font-face {
+            font-family: SFNS Display Bold;
+            src: url(Fonts/System-San-Francisco-Display-Bold.otf);
+        }
+         @font-face {
+            font-family: SFNS Display Thin;
+            src: url(Fonts/System-San-Francisco-Display-Thin.otf);
+        }
+         @font-face {
+            font-family: SFNS Display Regular;
+            src: url(Fonts/System-San-Francisco-Display-Regular.otf);
+        }
+        
+        
+                    
+            
+
+
+    </style>
+
+<body>
+    <div class="container">
+        <div class="head">
+            CSS Animations
+        </div>
+        <div class="box">
+            <div class="merrychristmas">
+               <strong> Merry Christmas!</strong>
+            </div>
+            <div class="cover">
+                <div>Open this box</div>
+            </div>
+            <div class="gift">
+            
+            </div>
+            <div class="gift2">
+            
+            </div>
+            <div class="gift3">
+            
+            </div>
+            <div class="gift4">
+            
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

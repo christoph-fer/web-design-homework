@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>Javascript | Image Gallery using Arrays</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuil.ttf');
+                font-weight: 300;
+            }
+             @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuisl.ttf');
+                font-weight: 400;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeui.ttf');
+                font-weight: normal;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/seguisb.ttf');
+                font-weight: 600;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuib.ttf');
+                font-weight: 700;
+            }
+            
+            * {
+               font-family: "MyFont";
+            }
+        	body {
+        		font-family: "MyFont";
+        		color: #333;
+                letter-spacing: -0.5px;
+        		margin: 0px;
+        		background-color: #f2f2f2;
+        	}
+
+        	.wrapper {
+        		
+        	}
+        	header {
+        		padding-top: 50px;
+        		padding-bottom: 30px;
+        		font-weight: 500;
+        		text-align: center;
+        		margin: auto;
+                text-transform: uppercase;
+        		font-size: 36px;
+                letter-spacing: 5px;
+        	}
+
+        	#main {
+        		background: #fff;
+        		height: 450px;
+                width: auto;
+        		padding: 30px;
+        		padding-top: -10px;
+        		box-shadow: 0px 0px 50px 0px #ddd;
+        		margin: 30px;
+        	}
+            .mainlose {
+                box-shadow: 0px 0px 50px 0px #cc0000;
+            }
+        	.brand {
+        		margin-top: 10px;
+        		font-size: 36px;
+        	}
+        	.data {
+                text-align: center;
+        	}
+        </style>
+        
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				Image Gallery
+			</header>
+			<div id="main">
+				
+        		<div class="brand">
+        		</div>
+        		<div class="data">
+        			<script type="text/javascript">
+        				var images=["Img1.jpg", "Img2.jpg", "Img3.jpg"];
+                        document.write("<img src="+images[0]+"alt=Bing>");
+
+                        
+                        
+        			</script>
+        		</div>
+			</div>
+		</div>
+	</body>
+</html>

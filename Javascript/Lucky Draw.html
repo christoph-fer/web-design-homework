@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>Lucky Draw</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuil.ttf');
+                font-weight: 300;
+            }
+             @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuisl.ttf');
+                font-weight: 400;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeui.ttf');
+                font-weight: normal;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/seguisb.ttf');
+                font-weight: 600;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuib.ttf');
+                font-weight: 700;
+            }
+            
+            * {
+               font-family: "MyFont";
+            }
+        	body {
+        		font-family: "MyFont";
+        		color: #333;
+                letter-spacing: -0.5px;
+        		margin: 0px;
+        		background-color: #f2f2f2;
+        	}
+
+        	.wrapper {
+        		
+        	}
+        	header {
+        		padding-top: 50px;
+        		padding-bottom: 50px;
+        		font-weight: 500;
+        		text-align: center;
+        		margin: auto;
+                text-transform: uppercase;
+        		font-size: 36px;
+                letter-spacing: 5px;
+        	}
+
+        	#main {
+        		background: #fff;
+        		height: 450px;
+                min-width: 300px;
+        		max-width: 360px;
+        		padding: 30px;
+        		padding-top: -10px;
+        		box-shadow: 0px 0px 50px 0px #ddd;
+        		margin: auto;
+        	}
+            .mainlose {
+                box-shadow: 0px 0px 50px 0px #cc0000;
+            }
+        	.brand {
+        		margin-top: 10px;
+        		font-size: 36px;
+        	}
+        	.data {
+                text-align: center;
+        	}
+        </style>
+        
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				Lucky Draw
+			</header>
+			<div id="main">
+				
+        		<div class="brand">
+        			<script type="text/javascript">
+        				alert("Welcome to the Lucky Draw!");
+        			</script>
+        		</div>
+        		<div class="data">
+        			<script type="text/javascript">
+        				n=parseInt(prompt("Enter any number between 0 - 100: "));
+
+                        ra=Math.round(Math.random()*100);
+                        
+                        document.write("<font size=42px style=font-weight:200>"+n+"</font><br>Your number");
+
+                        document.write("<br><font style=font-weight:200;font-size:130px;>"+ra+"</font><br><b><font style=font-size:24px;>Random Number</font></b>");
+
+                        if (ra==n) {
+                            document.write("</font><b><br><br><br><font style=font-size:46px;>YOU WIN!");
+                            //document.write(".main{box-shadow: 0px 0px 50px 0px #cc000;}");
+                            document.getElementById("main").style.boxShadow = "0px 0px 50px 0px #cc0000";
+                        }
+                        else {
+                            document.write("</font><b><br><br><br><font style=font-size:46px;>YOU LOSE!");
+                        }
+                        
+                        
+                        
+        			</script>
+        		</div>
+			</div>
+		</div>
+	</body>
+</html>

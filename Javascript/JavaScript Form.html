@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>Javascript | Subscription</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuil.ttf');
+                font-weight: 300;
+            }
+             @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuisl.ttf');
+                font-weight: 400;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeui.ttf');
+                font-weight: normal;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/seguisb.ttf');
+                font-weight: 600;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuib.ttf');
+                font-weight: 700;
+            }
+            @font-face {
+                font-family: "MySymb";
+                src:url('Fonts/segmdl2.ttf');
+                font-weight: 300;
+            }
+            
+            * {
+               font-family: "MyFont";
+            }
+        	body {
+        		font-family: "MyFont";
+        		color: #333;
+                letter-spacing: -0.5px;
+        		margin: 0px;
+        		background-color: #f2f2f2;
+        	}
+
+        	.wrapper {
+        		
+        	}
+        	header {
+        		padding-top: 50px;
+        		padding-bottom: 30px;
+        		font-weight: 500;
+        		text-align: center;
+        		margin: auto;
+                text-transform: uppercase;
+        		font-size: 36px;
+                letter-spacing: 5px;
+        	}
+
+        	#main {
+        		background: #fff;
+        		height: 350px;
+                width: 600px;
+        		padding: 30px;
+                padding-top: 60px;
+        		box-shadow: 0px 0px 50px 0px #ddd;
+        		margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                text-align: center;
+        	}
+            .mainlose {
+                box-shadow: 0px 0px 50px 0px #cc0000;
+            }
+        	.brand {
+        		
+        		font-size: 36px;
+			font-weight:bold;
+        	}
+        	.data {
+                text-align: center;
+        	}
+            .stage {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-left: auto;
+                margin-right: auto;
+
+            }
+            h1 input[type=button] {
+                background-color: #0063B1;
+                border: none;
+                color: #f2f2f2;
+                font-weight: bold;
+                font-size: 24px;
+                padding: 15px;
+                margin-top: 100px;
+                height: 100px;
+                width: auto;
+                margin-bottom: 20px;
+                font-family: MySymb;
+            }
+            input[type=button] {
+                background: #0063B1;
+                border: none;
+                font-size: 16px;
+                color: #f2f2f2;
+                height: 50px;
+                width: 130px;
+                margin-top: 30px;
+                font-family: MyFont;
+                font-weight: bold;
+                transition: background 0.3s;
+            }
+            input[type=button]:hover {
+                background: #0080E6;
+
+            } 
+            input[type=button]:active {
+                background: #004780;
+            }
+            img {
+                box-shadow: 0px 0px 60px 0px #bbb;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+	    input[type=text] {
+                background: #eee;
+                border: none;
+                font-size: 16px;
+                padding: 10px;
+                width: 250px;
+                margin-top: 30px;
+                font-family: MyFont;
+                transition: background 0.3s;
+            }            
+        </style>
+        <script>
+	
+		function subs(){
+		    rd=document.input1.username.value;
+		    
+		    em=document.input2.email.value;
+
+		    alert("Thank You, "+rd+"! "+"We'll keep you updated on "+em);
+
+		}
+	
+
+	</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				Subscription
+			</header>
+			<div id="main">
+				<div class="brand">
+					Subscribe to our Newsletter
+				</div><br>
+				<div>
+					<form name="input1">
+						<input name="username" type="text" placeholder="Username">
+					</form>
+				</div>
+				<div>
+					<form name="input2">
+					<input name="email" type="text" placeholder="Email">
+					</form>
+				</div>
+
+
+                
+
+                <br>
+
+                	<input type="button" value="SUBSCRIBE" onclick="subs()">
+                
+			</div>
+		</div>
+	</body>
+</html>

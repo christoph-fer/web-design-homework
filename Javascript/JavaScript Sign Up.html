@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>Javascript | Sign Up</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuil.ttf');
+                font-weight: 300;
+            }
+             @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuisl.ttf');
+                font-weight: 400;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeui.ttf');
+                font-weight: normal;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/seguisb.ttf');
+                font-weight: 600;
+            }
+            @font-face {
+                font-family: "MyFont";
+                src:url('Fonts/segoeuib.ttf');
+                font-weight: 700;
+            }
+            @font-face {
+                font-family: "MySymb";
+                src:url('Fonts/segmdl2.ttf');
+                font-weight: 300;
+            }
+            
+            * {
+               font-family: "MyFont";
+            }
+        	body {
+        		font-family: "MyFont";
+        		color: #333;
+                letter-spacing: -0.5px;
+        		margin: 0px;
+        		background-color: #f2f2f2;
+        	}
+
+        	header {
+        		padding-top: 50px;
+        		padding-bottom: 30px;
+        		font-weight: 500;
+        		text-align: center;
+        		margin: auto;
+                text-transform: uppercase;
+        		font-size: 36px;
+                letter-spacing: 5px;
+        	}
+
+        	#main {
+        		background: #fff;
+        		height: auto;
+                width: 400px;
+        		padding: 30px;
+                padding-bottom: 50px;
+                padding-top: 50px;
+        		box-shadow: 0px 0px 50px 0px #ddd;
+        		margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                text-align: center;
+        	}
+            .mainlose {
+                box-shadow: 0px 0px 50px 0px #cc0000;
+            }
+        	.brand {
+        		
+        		font-size: 32px;
+			    font-weight:bold;
+        	}
+        	.data {
+                text-align: center;
+        	}
+            .stage {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-left: auto;
+                margin-right: auto;
+
+            }
+            h1 input[type=button] {
+                background-color: #0063B1;
+                border: none;
+                color: #f2f2f2;
+                font-weight: bold;
+                font-size: 24px;
+                padding: 15px;
+                margin-top: 100px;
+                height: 100px;
+                width: auto;
+                margin-bottom: 20px;
+                font-family: MySymb;
+            }
+            input[type=button] {
+                background: #0063B1;
+                border: none;
+                font-size: 16px;
+                color: #f2f2f2;
+                height: 50px;
+                width: 130px;
+                margin-top: 10px;
+                font-family: MyFont;
+                font-weight: bold;
+                transition: background 0.3s;
+            }
+            input[type=button]:hover {
+                background: #0080E6;
+
+            } 
+            input[type=button]:active {
+                background: #004780;
+            }
+            input[type=submit] {
+                background: #0063B1;
+                border: none;
+                font-size: 16px;
+                color: #f2f2f2;
+                height: 50px;
+                width: 130px;
+                margin-top: 10px;
+                font-family: MyFont;
+                font-weight: bold;
+                transition: background 0.3s;
+            }
+            input[type=submit]:hover {
+                background: #0080E6;
+
+            } 
+            input[type=submit]:active {
+                background: #004780;
+            }
+            img {
+                box-shadow: 0px 0px 60px 0px #bbb;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+	        input[type=text] {
+                background: #eee;
+                border: none;
+                font-size: 16px;
+                padding: 10px;
+                width: 300px;
+                margin-top: 10px;
+                font-family: MyFont;
+                transition: background 0.3s;
+            }  
+            .textblock {
+                background: none;
+                border: none;
+                padding: 5px;
+                height: 20px;
+                width: 400px;
+                margin-left: 36px;
+            }      
+            .acctype {
+                text-align: left;
+                padding-top: 5px;
+                padding-left: 42px;
+            }    
+            .select {
+                background: #eee;
+                border: none;
+                font-size: 16px;
+                padding: 10px;
+                width: 320px;
+                margin-top: 20px;
+            }
+        </style>
+        <script>
+	
+		function signup(){
+            
+		    un=document.form1.username.value;
+		    em=document.form1.email.value;
+            pw=document.form1.password.value;
+            cn=document.form1.contact.value;
+            gn=document.form1.gender.selectedIndex;
+
+            //username
+            if(un==""){
+                document.form1.unerror.value="You can't leave this empty";
+                var cols=document.getElementsByClassName('textblock');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.color='#CC0000';
+                }
+                var cols=document.getElementsByName('username');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.backgroundColor='#FFEFEF';
+                }
+                valid=false;
+            }
+            else if(un.length<=2){
+                document.form1.unerror.value="Username should have at least 3 charachters";
+                var cols=document.getElementsByClassName('unerror');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.color='#CC0000';
+                }
+                var cols=document.getElementsByName('username');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.backgroundColor='#FFEFEF';
+                }
+                valid=false;
+            }
+            else {
+                document.form1.unerror.value="";
+                var cols=document.getElementsByName('username');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.backgroundColor='#EAFFCE';
+                }
+                valid=true;
+            }
+            
+            //email
+            emvalcom=em.indexOf(".com");
+            emvalat=em.indexOf("@");
+
+            if(em==""){
+                document.form1.emerror.value="You can't leave this empty";
+                var cols=document.getElementsByClassName('emerror');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.color='#CC0000';
+                }
+                var cols=document.getElementsByName('email');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.backgroundColor='#FFEFEF';
+                }
+                valid=false;
+            }
+            else if(emvalcom<0 || emvalat<0){
+                document.form1.emerror.value="Please enter a valid email";
+                var cols=document.getElementsByClassName('emerror');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.color='#CC0000';
+                }
+                var cols=document.getElementsByName('email');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.backgroundColor='#FFEFEF';
+                }
+                valid=false;
+            }
+            else{
+                document.form1.emerror.value=" ";
+                var cols=document.getElementsByName('email');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.backgroundColor='#EAFFCE';
+                }
+                valid=true;
+            }
+            
+            //password
+            if(pw==""){
+                document.form1.pwerror.value="You can't leave this empty";
+                var cols=document.getElementsByClassName('pwerror');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.color='#CC0000';
+                }
+                var cols=document.getElementsByName('password');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.backgroundColor='#FFEFEF';
+                }
+                valid=false;
+            }
+            else if(pw.length<8){
+                document.form1.pwerror.value="Password should have at least 8 charachters";
+                var cols=document.getElementsByClassName('pwerror');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.color='#CC0000';
+                }
+                var cols=document.getElementsByName('password');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.backgroundColor='#FFEFEF';
+                }
+                valid=false;
+            }
+            else{
+                document.form1.pwerror.value=" ";
+                var cols=document.getElementsByName('password');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.backgroundColor='#EAFFCE';
+                }
+                valid=true;
+            }
+
+            //contact
+            if(cn==""){
+                document.form1.cnerror.value="You can't leave this empty";
+                var cols=document.getElementsByClassName('cnerror');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.color='#CC0000';
+                }
+                var cols=document.getElementsByName('contact');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.backgroundColor='#FFEFEF';
+                }
+                valid=false;
+            }
+            else if(cn.length!=10 || isNaN(cn)){
+                document.form1.cnerror.value="Please enter a valid number";
+                var cols=document.getElementsByClassName('cnerror');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.color='#CC0000';
+                }
+                var cols=document.getElementsByName('contact');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.backgroundColor='#FFEFEF';
+                }
+                valid=false;
+            }
+            else{
+                document.form1.cnerror.value=" ";
+                var cols=document.getElementsByName('contact');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.backgroundColor='#EAFFCE';
+                }
+                valid=true;
+            }
+
+            //gender
+            if(gn==1 || gn==2 || gn==3){
+                document.form1.gnerror.value=" ";
+                var cols=document.getElementsByName('gender');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.backgroundColor='#EAFFCE';
+                }
+                valid=true;
+            }
+            else{
+                document.form1.gnerror.value="Please select an option";
+                var cols=document.getElementsByClassName('gender');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.color='#CC0000';
+                }
+                var cols=document.getElementsByName('gender');
+                for(i=0; i<cols.length; i++) {
+                    cols[i].style.backgroundColor='#FFEFEF';
+                }
+                valid=false;
+            }
+            return valid;
+		}
+	</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				frameboxx account
+			</header>
+			<div id="main">
+				<div class="brand">
+					Create an account
+                </div><br><br>
+                <form name="form1" method="get" action="Valid.html" onsubmit="return signup()">
+                    <div>
+                        <input name="username" type="text" placeholder="Username"><br>
+                        <textarea class="textblock" name="unerror" type="text" disabled></textarea>
+                    </div>
+                    <div>
+                        <input name="email" type="text" placeholder="Email"><br>
+                        <textarea class="textblock" name="emerror" type="text" disabled></textarea>
+                    </div>
+                    <div>
+                        <input name="password" type="text" placeholder="Create a password"><br>
+                        <textarea class="textblock" name="pwerror" type="text" disabled></textarea>
+                    </div>
+                    <div>
+                        <input name="contact" type="text" placeholder="Contact"><br>
+                        <textarea class="textblock" name="cnerror" type="text" disabled></textarea>
+                    </div>
+                    <div class="acctype">
+                        Account Type &nbsp &nbsp
+                        <input name="acctype" type="radio" value="prsnl" checked="checked">Personal &nbsp &nbsp
+                        <input name="acctype" type="radio" value="bsns">Business
+                    </div>
+                    <div>
+                        <select class="select" name="gender" size="1">
+                            <option>Select your gender</option>
+                            <option value="male">Male</option>        
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>            
+                        </select>	
+                        <textarea class="textblock" name="gnerror" type="text" disabled></textarea>
+                    </div>
+                    <br>
+                    <br>
+                    <input type="submit" value="SIGN UP" onclick="signup()">
+                </form>    
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Photo Gallery</title>
+        <style>
+            body {
+                font-family: SFNS Display, Segoe UI;
+                color: #333;
+                background-color: #f2f2f2;
+            }
+            .container {
+                float: left;
+                width: 25%;
+            }
+            .head {
+                font-weight: 700;
+                font-size: 40px;
+                padding-top: 40px;
+                padding-bottom: 20px;
+                padding-left: 10px;
+            }
+            .sub-head {
+                font-size: 15px;
+                color: #00B0F0;
+                font-weight: 500;
+            }
+            .gallery {
+                float: left;
+                //width: 200px;
+                padding: 10px;
+                transition: width 2s, height 4s;
+            }
+
+            .gallery:hover {
+                background-color: #ddd;
+            }
+
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+
+            .desc {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                text-align: left;
+                font-weight: 700;
+            }
+            .location {
+                color:#333;
+                font-weight: 500;
+            }
+            a {
+                text-decoration: none;
+                color: #333;
+            }
+            @media only screen and (max-width: 700px) {
+                .container {
+                    width: 49.99999%;
+                    margin: 6px 0;
+                }
+            }
+
+            @media only screen and (max-width: 500px){
+                .container {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="head">
+            <div class="sub-head">BING IMAGES</div>
+            <div>Wallpaper Gallery</div>
+        </div>
+        <div class="container">
+            <div class="gallery">
+                <a target="_blank" href="Img1.jpg">
+                    <img src="Img1.jpg" alt="Bing Images">
+                    <div class="desc">
+                        Great Hill Fort<br>
+                        <div class="location">New Jersey</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="gallery">
+                <a target="_blank" href="Img2.jpg">
+                    <img src="Img2.jpg" alt="Bing Images" width="600" height="400">
+                    <div class="desc">
+                        Vatican City
+                        <div class="location">Rome</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="gallery">
+              <a target="_blank" href="Img3.jpg">
+                    <img src="Img3.jpg" alt="Bing Images" width="600" height="400">
+                    <div class="desc">
+                        Amazon Mountains
+                        <div class="location">Alaska</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="gallery">
+              <a target="_blank" href="Img4.jpg">
+                    <img src="Img4.jpg" alt="Bing Images" width="600" height="400">
+                    <div class="desc">
+                        Michigan River
+                        <div class="location">Seattle</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="gallery">
+              <a target="_blank" href="Img5.jpg">
+                    <img src="Img5.jpg" alt="Bing Images" width="600" height="400">
+                    <div class="desc">
+                        Dhala's Light House
+                        <div class="location">France</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="gallery">
+               <a target="_blank" href="Img6.jpg">
+                    <img src="Img6.jpg" alt="Bing Images" width="600" height="400">
+                    <div class="desc">
+                        Mount Everest
+                        <div class="location">Tibet</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="gallery">
+                <a target="_blank" href="Img7.jpg">
+                    <img src="Img7.jpg" alt="Bing Images">
+                    <div class="desc">
+                        Clarke<br>
+                        <div class="location">Greenland</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="gallery">
+                <a target="_blank" href="Img8.jpg">
+                    <img src="Img8.jpg" alt="Bing Images" width="600" height="400">
+                    <div class="desc">
+                        Vineyards Of Grape
+                        <div class="location">Pennsylvania</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="gallery">
+              <a target="_blank" href="Img9.jpg">
+                    <img src="Img9.jpg" alt="Bing Images" width="600" height="400">
+                    <div class="desc">
+                        Amazon Mountains
+                        <div class="location">Alaska</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="gallery">
+              <a target="_blank" href="Img10.jpg">
+                    <img src="Img10.jpg" alt="Bing Images" width="600" height="400">
+                    <div class="desc">
+                        Michigan River
+                        <div class="location">Seattle</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="gallery">
+              <a target="_blank" href="Img11.jpg">
+                    <img src="Img11.jpg" alt="Bing Images" width="600" height="400">
+                    <div class="desc">
+                        Dhala's Light House
+                        <div class="location">France</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="gallery">
+               <a target="_blank" href="Img12.jpg">
+                    <img src="Img12.jpg" alt="Bing Images" width="600" height="400">
+                    <div class="desc">
+                        Mount Everest
+                        <div class="location">Tibet</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
+

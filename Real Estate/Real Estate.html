@@ -1,0 +1,399 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Real Estate</title>
+        <style>
+            body {
+                font-family: SFNS Display, Prduct Sans, Bhnschrift, Segoe UI;
+                margin: 0px;
+                background-color: #f2f2f2;
+            }
+            .container {
+                display: grid;
+                max-width: 1280px;
+                background-color: #f2f2f2;
+                color: #333;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 10px;
+                padding-right: 10px;
+                min-width: 460px;
+            }
+            .branding {
+                display: grid;
+                text-align: left;
+                grid-template-columns: 1fr 1fr;
+                padding: 10px;
+            }
+            ul {
+                overflow: hidden;
+                padding: 0px;
+                text-align: center;
+                cursor: pointer;
+                height: 40px;
+            }
+            .decocurrent {
+                background-color: #91253A;
+                height: 2px;
+                margin-top: 7px;
+                margin-bottom: 4px;
+                width: 45px;
+            }
+            li {
+                display: inline-block;
+                padding: 10px;
+                transition: background 0.4s, color 0.4s;
+            }
+            li:hover {
+                background: #91253A;
+                color: #f2f2f2;
+            }
+            .logo {
+                display:block;
+            }
+            .search {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 15px;
+                background-color: #F8E2CA;
+                color: #91253A;
+                text-align: right;
+            }
+            .call {
+                text-align: left;
+            }
+            input[type=text] {
+                border: 2px solid rgba(145,37,58,0.30);
+                font-family: SFNS Display;
+                padding: 5px;
+                width: 150px;
+                transition: 0.4s;
+            }
+            input[type=text]:focus {
+                width: 250px;
+                border: 2px solid #91253A;
+            }
+            .head {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+            }
+            .img {
+                display: grid;
+                background-image:url(IMG_3613.jpg);
+                height: 300px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .ad {
+                background-color: #91253A;
+                height: 300px;
+            }
+            .ad > div {
+                padding: 24px;
+                color: #f2f2f2;
+                font-weight: 500;
+                font-size: 16px;
+                height: 50px;
+            }
+            .rentbutton {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 10px;
+                
+            }
+            .rentbutton > div {
+                background: #F8E2CA;
+                color: #91253A;
+                padding: 5px;
+                text-align: center;
+                cursor: pointer;
+                border-radius: 5;
+                height: 20px;
+                transition: background 0.4s;
+
+            }
+            .rentbutton > div:hover {
+                background: #fff;
+            }
+            .content {
+                display: grid;
+                grid-template-columns: 5fr 10fr;
+                margin-top: 30px;
+            }
+            .content > div {
+                text-align:left;
+            }
+            .offer {
+                font-weight: 500;
+                font-size: 16px;
+                padding-right: 20px;
+            }
+            .deco {
+                background-color: #91253A;
+                height: 4px;
+                margin-top: 4px;
+                margin-bottom: 4px;
+                width: 110px;
+            }
+            .deco2 {
+                background-color: #91253A;
+                height: 4px;
+                margin-top: 4px;
+                margin-bottom: 4px;
+                width: 155px;
+            }
+            .newlist {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+            }
+            .featlist {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            .nlimg1 {
+                background-image: url(medium.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                margin-top: 10px;
+                height: 80px;
+                width: auto;
+            }
+            .nlimg2 {
+                background-image: url(big.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                margin-top: 10px;
+                height: 80px;
+                width: auto;
+            }
+            .nlimg3 {
+                background-image: url(small.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                margin-top: 10px;
+                height: 80px;
+                width: auto;
+            }
+            .nldata {
+                padding: 10px;
+                align-content: flex-start;
+                align-items: flex-start;
+                align-self: flex-start;
+            }
+            .fldata {
+                padding: 20px;
+                align-content: flex-start;
+                align-items: flex-start;
+                align-self: flex-start;
+                background-color: #F8E2CA;
+                border-left: #ccc solid thin;
+                border-right: #ccc solid thin;
+                border-bottom: #ccc solid thin;
+            }
+            .fldata2 {
+                padding: 20px;
+                align-content: flex-start;
+                align-items: flex-start;
+                align-self: flex-start;
+                border-bottom: #ccc solid thin;
+                border-left: #ccc solid thin;
+                border-right: #ccc solid thin;
+
+            }
+            .title {
+                color: #91253A;
+                font-weight: 600;
+            }
+            .subtitle {
+                font-size: 12px;
+                padding-top: 5px;
+                color: #7E7E7E;
+            }
+            .price
+            {
+                font-size: 14px;
+                padding-top: 5px;
+                font-weight: 600;
+            }
+            .spec
+            {
+                font-size: 14px;
+                padding-top: 5px;
+            }
+            .flimg1 {
+                background-image: url(maxresdefault.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                margin-top: 10px;
+                height: 170px;
+                width: auto;
+                background-color: #F8E2CA;
+                border-left: #ccc solid thin;
+                border-right: #ccc solid thin;
+                border-bottom: #ccc solid thin;
+            }
+            .listings {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .offercont {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            .footer {
+                display: grid;
+                height: 15px;
+                margin-top: 30px;
+                margin-left: -10px;
+                margin-right: -10px;
+                padding: 20px;
+                background-color: #ddd;
+                text-align: center;
+                font-size: 12px;
+            }
+            @media only screen and (max-width: 850px)
+            {
+                .branding {
+                    grid-template-columns: 1fr;
+                }
+                .head {
+                    grid-template-columns: 1fr;
+                }
+                .ad {
+                height: 220px;
+                }
+                .ad > div {
+                height: 20px;
+                }
+                .content {
+                    grid-template-columns: 1fr;
+                }
+                .offercont {
+                    display: grid;
+                    grid-area: "offer";
+                    padding-bottom: 20px;
+                }
+            }
+            @media only screen and (max-width: 600px)
+            {
+                .listings {
+                    grid-template-columns: 1fr;
+                    margin-top: -20px;
+                }
+                .listings > div {
+                    padding-top: 20px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="branding">
+                <div class="logo">
+                    <font size="+4">REAL<b>ESTATE</b></font>
+                    <div class="logo">
+                        <font size="+1" color="#91253A">Professional Real Estate Service </font>
+                    </div><br>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li>Home<br><div class="decocurrent"></div></li>
+                        <li>Find A Home</li>
+                        <li>Rent A Home</li>
+                        <li>Contact</li>
+                        <li>About</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search">
+                <div class="call">
+                    Browse Online or Call Us Toll-Free - (888) 555-4589
+                </div>
+                <div>
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+            <div class="head">
+                <div class="img">
+                </div>
+                <div class="ad">
+                    <div><font size="+3"><strong>Start Your Search</strong></font></div>
+                    <div><font size="-1">Whether you're looking to buy or rent your new home, we have you covered. Let us help you find your dream home today. </font></div>
+                    <div class="rentbutton">
+                        <div>Rent A Home</div>
+                        <div>Find A Home</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="offercont">
+                    <div class="offer">
+                        <font size="+3" color="#91253A"><strong>We offer a full line of Real Estate Services </strong></font>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed veritatis harum numquam rem corporis nobis excepturi blanditiis alias perspiciatis eaque eligendi animi neque, quisquam tempora!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, rerum laboriosam modi velit eos saepe eius nihil ea, officia non quaerat expedita esse repudiandae?</p>
+                    </div>
+                </div>
+                    <div class="listings">
+                        <div><strong>NEW LISTINGS</strong><br>
+                        <!--<hr width="100px" color="#91253A" size="3px" noshade>-->
+                            <div class="deco"></div>
+                            <div class="newlist">
+                                <div class="nlimg1"></div>
+                                <div class="nldata">
+                                    <div class="title">877 Island Ave</div>
+                                    <div class="subtitle">San Diego, CA 92101</div>
+                                    <div class="price">$424,000</div>
+                                    <div class="spec">3 bed, 2 bath, 1,322 Sq Ft</div>
+                                </div>
+                            </div>
+                        <div class="newlist">
+                            <div class="nlimg2"></div>
+                            <div class="nldata">
+                                <div class="title">419 Normandy Ave</div>
+                                <div class="subtitle">San Diego, CA 92101</div>
+                                <div class="price">$1,278,000</div>
+                                <div class="spec">5 bed, 4 bath, 5,563 Sq Ft</div>
+                            </div>
+
+                        </div>
+                        <div class="newlist">
+                            <div class="nlimg3"></div>
+                            <div class="nldata">
+                                <div class="title">850 Beach Street</div>
+                                <div class="subtitle">San Diego, CA 92101</div>
+                                <div class="price">$235,000</div>
+                                <div class="spec">1 bed, 1 bath, 776 Sq Ft</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div><strong>FEATURED LISTINGS</strong>
+                        <div class="deco2"></div>
+                        <div class="featlist">
+                            <div class="flimg1"></div>
+                            <div class="fldata">
+                               <div class="title">5266 Cromwell Ct.</div>
+                                <div class="subtitle">Poway, CA 92064</div>
+                            </div>
+                            <div class="fldata2">
+                                <div class="price">$789,000</div>
+                                <div class="spec">3 bed, 4 bath, 4,582 Sq Ft on 0.45 Acres</div> 
+                                <div class="subtitle">Property Type: Single Family Home</div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="footer">
+                © 2017 Real Estate Corp. All Rights Reserved.
+            </div>
+        </div>
+    </body>
+</html>
